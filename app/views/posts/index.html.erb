@@ -1,1 +1,7 @@
-<h1>Index</h1>
+<h1>Posts List</h1>
+
+<% @posts.each do |p| %>
+    <h2> <%= p.title %> </h1>
+    <p> <%= p.body %> </p>
+    <%= link_to "Read More", post_path(p) %>
+<% end %>
